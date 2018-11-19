@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-const Header = () => {
+const Header = props => {
     const { textStyle, viewStyle } = styles;
     return (
         <View style={viewStyle}>
-            <Text style={textStyle}>Albums!</Text>
+            <Text style={textStyle}>{props.headerText}</Text>
         </View>
     );
 };
@@ -16,10 +16,15 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         height: 60,
-        paddingTop: 15
+        paddingTop: 15,
+        shadowColor: '#000000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.8,
+        elevation: 5,
+        position: 'relative'
     },
     textStyle: {
-        fontSize: 50
+        fontSize: 20
     }
 };
 
