@@ -1,8 +1,15 @@
 import React from 'react';
-import { AppRegistry } from 'react-native';
-import Header from './src/components/header';
+import { AppRegistry, View } from 'react-native';
 
-const App = () => <Header headerText={'Suck Yeah!'} />;
+import Header from './src/components/header';
+import AlbumList from './src/components/AlbumList';
+
+const App = () => (
+    <View>
+        <Header headerText={'Suck Yeah!'} />
+        <AlbumList />
+    </View>
+);
 
 AppRegistry.registerComponent('albums', () => App);
 
